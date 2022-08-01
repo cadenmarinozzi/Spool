@@ -37,6 +37,7 @@ class Search extends Component {
 		this.state = {
 			playingPreview: false,
 			songNameRef: createRef(),
+			genreRef: createRef(),
 			minEnergy: 0,
 			maxEnergy: 1,
 			minDanceability: 0,
@@ -66,7 +67,7 @@ class Search extends Component {
 			songNames: [
 				await this.spotify.getSongId(this.state.searchSongName),
 			],
-			genres: [this.state.genre],
+			genres: [this.state.searchGenre],
 			minEnergy: this.state.minEnergy,
 			maxEnergy: this.state.maxEnergy,
 			minDanceability: this.state.minDanceability,
@@ -144,7 +145,8 @@ class Search extends Component {
 										return (
 											<div
 												className="song-preview"
-												key={index}>
+												key={index}
+											>
 												<img
 													className="song-preview-image"
 													src={
@@ -162,7 +164,8 @@ class Search extends Component {
 																songPreview.name,
 															songPreviews: null,
 														});
-													}}>
+													}}
+												>
 													<div className="song-preview-info">
 														<h1 className="song-preview-info-title">
 															{songPreview.name}
@@ -184,6 +187,7 @@ class Search extends Component {
 						)}
 						<Input
 							text="Genre"
+							inputRef={this.state.genreRef}
 							placeholder="Enter Genre"
 							icon={faMusic}
 							onInput={(genre) => {
@@ -203,8 +207,20 @@ class Search extends Component {
 										return (
 											<div
 												className="genre-preview"
-												key={index}>
-												<button className="genre-preview-content">
+												key={index}
+											>
+												<button
+													className="genre-preview-content"
+													onClick={() => {
+														this.state.genreRef.current.value =
+															genrePreview;
+														this.setState({
+															searchGenre:
+																genrePreview,
+															genrePreviews: null,
+														});
+													}}
+												>
 													<div className="genre-preview-info">
 														<h1 className="genre-preview-info-title">
 															{genrePreview}
@@ -295,7 +311,8 @@ class Search extends Component {
 							<Button
 								icon={faMagnifyingGlass}
 								onClick={this.handleSearch.bind(this)}
-								small>
+								small
+							>
 								Search
 							</Button>
 						</div>
@@ -312,7 +329,8 @@ class Search extends Component {
 										return (
 											<div
 												className="result-item"
-												key={index}>
+												key={index}
+											>
 												<div className="result-item-contents">
 													<h2 className="result-position">
 														{index + 1}.{' '}
@@ -323,7 +341,8 @@ class Search extends Component {
 														href={
 															result.external_urls
 																.spotify
-														}>
+														}
+													>
 														<FontAwesomeIcon
 															className="result-link-icon"
 															icon={
@@ -401,16 +420,16 @@ class Search extends Component {
 																previewAudio:
 																	previewAudio,
 															});
-														}}>
+														}}
+													>
 														<h1
 															className={`result-title ${
 																previewing
 																	? ' playing-result-title'
 																	: ''
 															}`}
-															href={
-																result.href
-															}>{`${result.name}`}</h1>
+															href={result.href}
+														>{`${result.name}`}</h1>
 														<h3 className="result-artists">{`- ${result.artists
 															.map((artist) => {
 																return artist.name;
