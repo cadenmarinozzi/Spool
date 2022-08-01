@@ -35,7 +35,9 @@ class Login extends Component {
 	handleLogin() {
 		window.location = `https://accounts.spotify.com/authorize?client_id=${
 			spotifyConfig.clientId
-		}&redirect_uri=${'http://localhost:3000/redirect'}&scope=${spotifyConfig.scopes.join(
+		}&redirect_uri=${
+			spotifyConfig.redirectURI
+		}&scope=${spotifyConfig.scopes.join(
 			'%20'
 		)}&response_type=token&show_dialog=true`;
 	}
