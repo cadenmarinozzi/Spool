@@ -6,7 +6,9 @@ const spotifyConfig = {
 		'user-read-playback-state',
 		'user-read-private',
 	],
-	redirectURI: 'https://nekumelon.github.io/Spool',
+	redirectURI: window.location.href.includes('localhost')
+		? 'http://localhost:3000/redirect'
+		: 'https://nekumelon.github.io/Spool',
 };
 
 export { spotifyConfig };
