@@ -4,33 +4,25 @@ import Input from './index.js';
 export default {
 	title: 'Input',
 	component: Input,
+	parameters: {
+		backgrounds: { default: 'dark' },
+	},
 };
 
-export const Primary = () => (
+const Template = (args) => (
 	<Input
 		placeholder="Input"
-		value="Input"
 		text="Input"
+		value="Input"
 		onInput={() => {}}
+		{...args}
 	></Input>
 );
+export const Primary = Template.bind({});
+export const Icon = Template.bind({});
 
-export const Icon = () => (
-	<Input
-		placeholder="Input"
-		value="Input"
-		text="Input"
-		icon={faFireFlameCurved}
-		onInput={() => {}}
-	></Input>
-);
-
-Primary.args = {
-	primary: true,
-	label: 'Input',
-};
+Primary.args = {};
 
 Icon.args = {
-	primary: false,
-	label: 'Input',
+	icon: faFireFlameCurved,
 };

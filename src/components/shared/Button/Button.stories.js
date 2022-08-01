@@ -7,42 +7,61 @@ export default {
 	component: Button,
 };
 
-export const Primary = () => <Button>Button</Button>;
-export const Icon = () => <Button icon={faFireFlameCurved}>Button</Button>;
-export const IconRight = () => (
-	<Button rightIcon={faFireFlameCurved}>Button</Button>
-);
-export const CustomIcon = () => (
-	<Button
-		customIcon={
-			<FontAwesomeIcon
-				style={{
-					fontSize: '25pt',
-				}}
-				icon={faFireFlameCurved}
-			/>
-		}
-	>
-		Button
-	</Button>
-);
+const Template = (args) => <Button {...args}>Button</Button>;
+export const Primary = Template.bind({});
+export const Icon = Template.bind({});
+export const RightIcon = Template.bind({});
+export const CustomIcon = Template.bind({});
+export const Small = Template.bind({});
+export const SmallIcon = Template.bind({});
+export const SmallRightIcon = Template.bind({});
+export const SmallCustomIcon = Template.bind({});
 
-Primary.args = {
-	primary: true,
-	label: 'Button',
-};
+Primary.args = {};
 
 Icon.args = {
 	primary: false,
 	label: 'Button',
+	icon: faFireFlameCurved,
 };
 
-IconRight.args = {
-	primary: false,
-	label: 'Button',
+RightIcon.args = {
+	rightIcon: faFireFlameCurved,
 };
 
 CustomIcon.args = {
-	primary: false,
-	label: 'Button',
+	customIcon: (
+		<FontAwesomeIcon
+			style={{
+				fontSize: '25pt',
+			}}
+			icon={faFireFlameCurved}
+		/>
+	),
+};
+
+Small.args = {
+	small: true,
+};
+
+SmallIcon.args = {
+	small: true,
+	icon: faFireFlameCurved,
+};
+
+SmallRightIcon.args = {
+	small: true,
+	rightIcon: faFireFlameCurved,
+};
+
+SmallCustomIcon.args = {
+	small: true,
+	customIcon: (
+		<FontAwesomeIcon
+			style={{
+				fontSize: '25pt',
+			}}
+			icon={faFireFlameCurved}
+		/>
+	),
 };

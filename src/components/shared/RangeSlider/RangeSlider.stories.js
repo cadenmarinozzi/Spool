@@ -8,26 +8,20 @@ export default {
 	component: RangeSlider,
 };
 
-export const Primary = () => (
-	<RangeSlider min={0} max={100} text="Range Slider" onChange={() => {}} />
-);
-
-export const Icon = () => (
+const Template = (args) => (
 	<RangeSlider
 		min={0}
 		max={100}
+		{...args}
 		text="Range Slider"
-		icon={faFireFlameCurved}
 		onChange={() => {}}
-	/>
+	></RangeSlider>
 );
+export const Primary = Template.bind({});
+export const Icon = Template.bind({});
 
-Primary.args = {
-	primary: true,
-	label: 'Range Slider',
-};
+Primary.args = {};
 
 Icon.args = {
-	primary: false,
-	label: 'Range Slider',
+	icon: faFireFlameCurved,
 };
