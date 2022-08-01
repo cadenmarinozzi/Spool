@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/Spool/static/css/main.0ef70868.css",
-    "main.js": "/Spool/static/js/main.3c79b44a.js",
+    "main.js": "/Spool/static/js/main.16f1e0db.js",
     "static/media/orkney-bold.otf": "/Spool/static/media/orkney-bold.c268a4d85e4bff25b1d3.otf",
     "static/media/orkney-medium.otf": "/Spool/static/media/orkney-medium.57859b5b795bc47b0808.otf",
     "static/media/orkney-light.otf": "/Spool/static/media/orkney-light.d39847adbd2ffbfec8ff.otf",
     "static/media/orkney-regular.otf": "/Spool/static/media/orkney-regular.5b030529f4435f9d7dde.otf",
     "index.html": "/Spool/index.html",
     "main.0ef70868.css.map": "/Spool/static/css/main.0ef70868.css.map",
-    "main.3c79b44a.js.map": "/Spool/static/js/main.3c79b44a.js.map"
+    "main.16f1e0db.js.map": "/Spool/static/js/main.16f1e0db.js.map"
   },
   "entrypoints": [
     "static/css/main.0ef70868.css",
-    "static/js/main.3c79b44a.js"
+    "static/js/main.16f1e0db.js"
   ]
 }
