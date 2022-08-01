@@ -1,0 +1,264 @@
+@use '../../../colors.scss' as *;
+@use '../../../vars.scss' as *;
+
+.results-container {
+    margin: 40px;
+    margin-top: 465px;
+
+    background: transparent;
+
+    .result-item {
+        display: flex;
+        flex-direction: row;
+
+        margin-bottom: 10px;
+
+        background: transparent;
+
+        .result-item-contents {
+            background: transparent;
+
+            outline: 0;
+            border: 0;
+
+            display: flex;
+            flex-direction: row;
+
+            .result-item-info {
+                background: transparent;
+
+                outline: 0;
+                border: 0;
+
+                display: flex;
+                flex-direction: row;
+
+                cursor: pointer;
+            }
+
+            .result-link-icon {
+                margin-left: 10px;
+                margin-top: 4px;
+        
+                color: $spotify-theme;
+
+                cursor: pointer;
+            }
+
+            .music-bars {
+                position: relative;
+                display: flex;
+
+                justify-content: space-between;
+
+                width: 13px;
+                height: 13px;
+
+                margin-top: 6px;
+                margin-left: 10px;
+
+                @keyframes bounce {
+                    10% {
+                        transform: scaleY(0.3); /* start by scaling to 30% */
+                    }
+                    
+                    30% {
+                        transform: scaleY(1); /* scale up to 100% */
+                    }
+                    
+                    60% {
+                        transform: scaleY(0.5); /* scale down to 50% */
+                    }
+                    
+                    80% {
+                        transform: scaleY(0.75); /* scale up to 75% */
+                    }
+                    
+                    100% {
+                        transform: scaleY(0.6); /* scale down to 60% */
+                    }
+                }
+                
+
+                .music-bar {
+                    width: 3px;
+                    height: 100%;
+
+                    background-color: $spotify-theme;
+
+                    border-radius: 3px;
+
+                    transform-origin: bottom;
+                    animation: bounce 2.2s ease infinite alternate;
+
+                    content: '';
+
+                    &:nth-of-type(2) {
+                        animation-delay: -2.2s; /* Start at the end of animation */
+                    }
+                
+                    &:nth-of-type(3) {
+                        animation-delay: -3.7s; /* Start mid-way of return of animation */
+                    }
+                }
+            }
+
+            .result-position {
+                margin-left: 20px;
+                margin-top: 5px;     
+                
+                color: white;
+            }
+
+            .result-artists {
+                margin-left: 5px;
+                margin-top: 5px;
+        
+                font-weight: 100;
+                font-family: OrkneyLight;
+        
+                color: rgba(#bbb, 0.4);
+            }
+        
+            .result-title {
+                font-family: OrkneyRegular;
+
+                margin-top: 3px;
+                margin-left: 10px;
+
+                transform: translateY(10%);
+
+                color: white;
+            }
+
+            .playing-result-title {
+                color: $spotify-theme;
+            }
+        }
+    }
+}
+
+.search-bar {
+    position: absolute;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    margin-top: 10px;
+
+    background: rgb(30, 30, 30);
+    z-index: 3;
+
+    .song-settings-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 10px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .song-previews-container {
+        border: $border;
+        border-radius: $border-radius-medium;
+
+        padding: 15px;
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+        .song-preview {
+            display: flex;
+            flex-direction: row;
+
+            .song-preview-content {
+                cursor: pointer;
+                
+                outline: 0;
+                border: 0;
+
+                background: transparent;
+
+                display: flex;
+
+                margin-bottom: 30px;
+            }
+            
+            .song-preview-image {
+                width: 25px;
+                height: 25px;
+
+                margin-right: 10px;
+            }
+
+            .song-preview-info {
+                .song-preview-info-title {
+                    color: white;
+                    font-family: OrkneyMedium;
+                }
+
+                .song-preview-info-artist {
+                    position: absolute;
+                    color: rgba(#bbb, 0.4);
+                }
+            }
+        }
+
+        .song-preview:last-child {
+            margin-bottom: -20px;
+        }
+    }
+
+    .genre-previews-container {
+        border: $border;
+        border-radius: $border-radius-medium;
+
+        padding: 15px;
+
+        margin-bottom: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        .genre-preview {
+            display: flex;
+            flex-direction: row;
+
+            .genre-preview-content {
+                cursor: pointer;
+                
+                outline: 0;
+                border: 0;
+
+                background: transparent;
+
+                display: flex;
+
+                margin-bottom: 30px;
+            }
+
+            .genre-preview-info {
+                .genre-preview-info-title {
+                    color: white;
+                    font-family: OrkneyMedium;
+                }
+            }
+        }
+
+        .genre-preview:last-child {
+            margin-bottom: -35px;
+        }
+    }
+}
+
+.slider-range {
+    margin-bottom: 14px;
+}
+
+.search-submit {
+    // margin-left: 12px;
+    display: table;
+    margin: 0 auto;
+}

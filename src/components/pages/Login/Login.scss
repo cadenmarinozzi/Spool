@@ -1,0 +1,40 @@
+@use '../../../colors.scss' as *;
+
+.circle1 {
+    width: 100px;
+    height: 100px;
+
+    background: linear-gradient(to right, $spotify-theme, rgba($spotify-theme, 0.5));
+    border-radius: 50%;
+
+    left: 50%;
+    top: 50%;
+
+    position: absolute;
+}
+
+.circle2 {
+    width: 100px;
+    height: 100px;
+
+    background: linear-gradient(to right, $spotify-theme, rgba($spotify-theme, 0.5));
+    border-radius: 50%;
+
+    left: calc(50% - 20px);
+    top: calc(50% - 100px);
+
+    position: absolute;
+}
+
+.circle3 {
+    width: 150px;
+    height: 150px;
+
+    background: linear-gradient(to left, $spotify-theme, rgba($spotify-theme, 0.5));
+    border-radius: 50%;
+
+    left: calc(50% - 180px);
+    top: calc(50% - 150px);
+
+    position: absolute;
+}

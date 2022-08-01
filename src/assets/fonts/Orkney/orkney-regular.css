@@ -1,0 +1,9 @@
+@font-face {
+    font-family: OrkneyRegular;
+
+    src: url('orkney-regular.otf') format('opentype');
+    font-style: normal;
+    
+    text-rendering: optimizeLegibility;
+}
+

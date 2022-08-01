@@ -1,0 +1,106 @@
+@use '../../../colors.scss'as *;
+
+.input-container {
+    background: transparent;
+
+    position: relative;
+
+    border: $border;
+    border-radius: 4px;
+
+    padding: 5px;
+    margin: 10px;
+
+    .input-label {
+        position: absolute;
+
+        left: 30px;
+        top: 7px;
+
+        transition: all 0.2s;
+        padding: 0 2px;
+
+        z-index: 1;
+
+        color: white;
+
+        font-size: 10pt;
+
+        font-family: OrkneyRegular, sans-serif;
+
+        cursor: text;
+    }
+
+    .input {
+        background: transparent;
+    
+        border: 0;
+    
+        color: white;
+    
+        outline: transparent;
+    
+        font-size: 11pt;
+    
+        transition: all 0.3s;
+    }
+
+    .input-label::before {
+        content: "";
+
+        height: 5px;
+
+        background: rgb(30, 30, 30);
+        position: absolute;
+
+        left: 0px;
+        top: 5px;
+
+        width: 100%;
+        
+        z-index: -1;
+
+        opacity: 0;
+    }
+
+    .input:not(:placeholder-shown):not(:focus)+.input-label {
+        top: -7px;
+        color: #aaa;
+
+        font-size: 9pt;
+    }
+
+    .input:focus+.input-label {
+        top: -7px;
+        color: $spotify-theme;
+
+        font-size: 9pt;
+    }
+
+    .input:focus+.input-label::before {
+        opacity: 1;
+    }
+
+    .input:not(:placeholder-shown):not(:focus)+.input-label::before {
+        opacity: 1;
+    }
+
+    .input::placeholder {
+        opacity: 0;
+        transition: all 0.3s;
+    }
+
+    .input:focus::placeholder {
+        opacity: 1;
+    }
+
+    .input-icon {
+        font-size: 11pt;
+
+        margin-left: 5px;
+        margin-right: 7px;
+
+        background: transparent;
+        color: #555;
+    }
+}

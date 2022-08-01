@@ -1,0 +1,34 @@
+@use './colors.scss' as *;
+
+* {
+  padding: 0;
+  margin: 0;
+
+  font-family: OrkneyRegular;
+  font-size: 13pt;
+}
+
+body {
+  color: white;
+  background: $background;
+}
+
+a {
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

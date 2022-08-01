@@ -1,0 +1,58 @@
+@use '../../../colors.scss' as *;
+@use '../../../vars.scss' as *;
+
+.button {
+    padding: 10px;
+
+    border: $border;
+    border-color: $spotify-theme;
+
+    border-radius: $border-radius-small;
+
+    outline: 0;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+
+    color: $spotify-theme;
+    background: rgba($spotify-theme, 0.1);
+
+    display: flex;
+    flex-direction: row;
+
+    font-size: 12pt;
+
+    .left-icon {
+        margin-right: 10px;
+    }
+
+    .right-icon {
+        margin-left: 10px;
+    }
+}
+
+.button-small {
+    padding: 4px;
+
+    padding-right: 8px;
+    padding-top: 6px;
+    padding-left: 8px;
+
+    .left-icon {
+        font-size: 11pt;
+        margin-right: 6px;
+    }
+
+    .right-icon {
+        font-size: 11pt;
+    }
+}
+
+.button:hover {
+    background: rgba($spotify-theme, 0.3);
+}
+
+.button:active {
+    background: rgba($spotify-theme, 0.5);
+}

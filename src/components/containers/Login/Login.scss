@@ -1,0 +1,28 @@
+@use '../../../colors.scss' as *;
+@use '../../../vars.scss' as *;
+
+.login {
+    padding: 20px;
+
+    border: $border;
+    border-radius: $border-radius-large;
+
+    background: rgba(white, .05);
+
+    .spotify-icon {
+        font-size: 20px;
+
+        margin-top: -2px;
+    }
+
+    .login-header { 
+        display: flex;
+        justify-content: space-between;
+
+        margin-bottom: 10px;
+
+        .login-title {
+            font-size: 14pt;
+        }
+    }
+}
