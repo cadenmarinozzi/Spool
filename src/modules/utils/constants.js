@@ -8,7 +8,7 @@ const spotifyConfig = {
 	],
 	redirectURI: window.location.href.includes('localhost')
 		? 'http://localhost:3000/redirect'
-		: 'https://nekumelon.github.io/Spool',
+		: 'https://cadenmarinozzi.github.io/Spool',
 };
 
 export { spotifyConfig };
