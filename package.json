@@ -2,7 +2,7 @@
   "name": "spool",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://nekumelon.github.io/Spool",
+  "homepage": "https://cadenmarinozzi.github.io/Spool",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
