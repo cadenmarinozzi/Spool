@@ -5,4 +5,4 @@ Spotify Tools
 See the [LICENSE](./LICENSE) for more the License.
 
 # Author
-Spool is created with ❤️ by [@nekumelon](https://github.com/cadenmarinozzi).
+Spool is created with ❤️ by [@cadenmarinozzi](https://github.com/cadenmarinozzi).
